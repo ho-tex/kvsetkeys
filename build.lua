@@ -20,10 +20,10 @@ maxprintline=10000
 checkruns = 2
 
 tdslocations={
-"doc/latex/oberdiek/kvsetkeys-example.tex",
-"doc/latex/oberdiek/kvsetkeys.pdf",
-"source/latex/oberdiek/kvsetkeys.dtx",
-"tex/generic/oberdiek/kvsetkeys.sty",
+"doc/latex/kvsetkeys/kvsetkeys-example.tex",
+"doc/latex/kvsetkeys/kvsetkeys.pdf",
+"source/latex/kvsetkeys/kvsetkeys.dtx",
+"tex/generic/kvsetkeys/kvsetkeys.sty",
 }
 
 function update_tag(file,content,tagname,tagdate)
