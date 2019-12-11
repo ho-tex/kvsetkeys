@@ -701,8 +701,8 @@ and the derived files
     \fi
   }%
   \TMP@RequirePackage{infwarerr}[2007/09/09]%
+  \let\PackageError\@PackageError
 \else
-  \RequirePackage{infwarerr}[2007/09/09]%
 \fi
 %    \end{macrocode}
 %
@@ -1282,7 +1282,7 @@ $ \let#1\KVS@Global
 %    \begin{macro}{\kv@error@generic}
 %    \begin{macrocode}
 \def\kv@error@generic#1#2#3{%
-  \@PackageError{kvsetkeys}{%
+  \PackageError{kvsetkeys}{%
     #1 key `#3'%
   }{%
     The keyval family of the key `#3' is `#2'.\MessageBreak
