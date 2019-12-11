@@ -701,10 +701,8 @@ and the derived files
     \fi
   }%
   \TMP@RequirePackage{infwarerr}[2007/09/09]%
-  \TMP@RequirePackage{etexcmds}[2010/01/28]%
 \else
   \RequirePackage{infwarerr}[2007/09/09]%
-  \RequirePackage{etexcmds}[2010/01/28]%
 \fi
 %    \end{macrocode}
 %
@@ -718,16 +716,7 @@ and the derived files
 %
 %    \cs{unexpanded}, \cs{ifcsname}, and \cs{unless} are used if found.
 %    \begin{macrocode}
-\begingroup\expandafter\endgroup
-\ifcase0\ifetex@unexpanded
-          \expandafter\ifx\csname ifcsname\endcsname\relax
-          \else
-            \expandafter\ifx\csname unless\endcsname\relax
-            \else
-              1%
-            \fi
-          \fi
-        \fi
+\ifx\numexpr\@undefined
   \catcode`\$=9 % ignore
   \catcode`\&=14 % comment
 \else % e-TeX
@@ -757,7 +746,7 @@ and the derived files
 %    \begin{macro}{\KVS@IfEmpty}
 %    \begin{macrocode}
 \long\def\KVS@IfEmpty#1{%
-& \edef\KVS@Temp{\etex@unexpanded{#1}}%
+& \edef\KVS@Temp{\unexpanded{#1}}%
 $ \begingroup
 $   \toks@{#1}%
 $   \edef\KVS@Temp{\the\toks@}%
@@ -1023,7 +1012,7 @@ $ \expandafter\endgroup
 %    |#3|: processor
 %    \begin{macrocode}
 \long\def\KVS@@Process#1#2=\KVS@Nil#3{%
-& \edef\kv@value{\etex@unexpanded{#2}}%
+& \edef\kv@value{\unexpanded{#2}}%
 $ \begingroup
 $   \toks@{#2}%
 $   \xdef\KVS@Global{\the\toks@}%
@@ -1233,9 +1222,9 @@ $     \expandafter\ifx\csname KV@#1@#3@default\endcsname\relax
 & \edef#1{%
 &   \ifx#1\KVS@empty
 &   \else
-&     \etex@unexpanded{#1},%
+&     \unexpanded{#1},%
 &   \fi
-&   \etex@unexpanded{{#2}={#3}}%
+&   \unexpanded{{#2}={#3}}%
 & }%
 $ \begingroup
 $   \ifx#1\KVS@empty
