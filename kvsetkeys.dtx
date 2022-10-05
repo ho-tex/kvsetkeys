@@ -1222,7 +1222,7 @@ $     \expandafter\ifx\csname KV@#1@#3@default\endcsname\relax
 & \edef#1{%
 &   \ifx#1\KVS@empty
 &   \else
-&     \unexpanded{#1},%
+&     \unexpanded\expandafter{#1},%
 &   \fi
 &   \unexpanded{{#2}={#3}}%
 & }%
@@ -1667,6 +1667,9 @@ $ \x
 %     Documentation updates.
 %   \item
 %     Avoid \xpackage{etexcmds} and \xpackage{infwarwerr} in \LaTeX.
+%   \end{Version}
+%   \begin{Version}{2022-10-05 v1.19}
+%   \item Corrected storing of unknown keys, issue \#1
 %   \end{Version}
 % \end{History}
 %
