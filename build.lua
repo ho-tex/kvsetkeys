@@ -13,7 +13,7 @@ installfiles = {
 textfiles = {"README.md"}
 unpackfiles = {'kvsetkeys.dtx'}
 
-packtdszip  = true
+packtdszip  = false
 
 
 maxprintline=10000
