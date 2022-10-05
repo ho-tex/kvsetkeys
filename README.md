@@ -1,4 +1,4 @@
-# kvsetkeys package for LaTeX
+# kvsetkeys 
 
 Version: 2022-10-05 v1.19
 
