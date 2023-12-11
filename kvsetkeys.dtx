@@ -58,7 +58,7 @@
 %    use A4 as paper format:
 %       \PassOptionsToClass{a4paper}{article}
 %
-%    Programm calls to get the documentation (example):
+%    Program calls to get the documentation (example):
 %       pdflatex kvsetkeys.dtx
 %       makeindex -s gind.ist kvsetkeys.idx
 %       pdflatex kvsetkeys.dtx
@@ -348,12 +348,12 @@ and the derived files
 %
 % \begin{declcs}{kv@processor@default}\,\M{family}\,\M{key}\,\M{value}
 % \end{declcs}
-% There are many possiblities to process key value pairs.
+% There are many possibilities to process key value pairs.
 % \cs{kv@processor@default} is the processor used in \cs{kvsetkeys}.
 % It reimplements and extends the behaviour of
 % \xpackage{keyval}'s \cs{setkeys}.
 % In case of unknown keys \cs{setkeys} raise an error.
-% This processer, however, calls a handler instead, if it
+% This processor, however, calls a handler instead, if it
 % is provided by the family. Both \meta{family} and \meta{key}
 % may contain package \xpackage{babel}'s shorthands
 % (since 2011/04/07 v1.13).
